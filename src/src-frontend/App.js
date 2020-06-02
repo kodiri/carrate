@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
-import Navbar from "./src-frontend/Components/Navbar/Navbar.js";
-import Homepage from "./src-frontend/Pages/Homepage/Homepage.js";
+import Navbar from "./Components/Navbar/Navbar.js";
+import Homepage from "./Pages/Homepage/Homepage.js";
 
 function App() {
   return (
