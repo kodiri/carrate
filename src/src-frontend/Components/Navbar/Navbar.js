@@ -1,7 +1,15 @@
 import React from "react";
 import "./Navbar.css";
-//import { Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Menu from "./Menu/Menu.js";
 
 export default function Navbar() {
-  return <div>Hello, navbar!</div>;
+  return (
+    <div className="navbar">
+      <Link className="navbar-item" to="/">
+        Home
+      </Link>
+      <Menu />
+    </div>
+  );
 }
