@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./Searchbar.css";
 
 /*
@@ -7,19 +7,18 @@ export default function Searchbar() {
 }
 */
 export default class SearchBar extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-        search: ''
-    }
-}
-handleChange = (event) => {
-  this.setState({
-      search: event.target.value
-  })
-}
-/* needs to be tied to the desired API
+      search: "",
+    };
+  }
+  handleChange = (event) => {
+    this.setState({
+      search: event.target.value,
+    });
+  };
+  /* needs to be tied to the desired API
 
 handleSubmit = (event) => {
   event.preventDefault();
@@ -27,17 +26,21 @@ handleSubmit = (event) => {
 }
 */
 
-  render (){
+  render() {
     return (
-      <div className='search'>
+      <div className="search">
         <form onSubmit={this.handleSubmit}>
-              <input id='searchbar' type='text' name='search' 
-                  placeholder='Search my igredients' 
-                  value={this.state.search} onChange={this.handleChange}
-              />
-              <input type='submit' value='Search'/>
+          <input
+            id="searchbar"
+            type="text"
+            name="search"
+            placeholder="Search my ingredients"
+            value={this.state.search}
+            onChange={this.handleChange}
+          />
+          <input type="submit" value="Search" />
         </form>
       </div>
-    )
+    );
   }
 }
