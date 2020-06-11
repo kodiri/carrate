@@ -1,6 +1,10 @@
 .searchbar {
   position: absolute;
+<<<<<<< HEAD
   top: 25%;
+=======
+  top: 30%;
+>>>>>>> b8bff279b052509161b86223c3afebc669e91def
   left: 10%;
   right: 10%;
   border-radius: 50px;
