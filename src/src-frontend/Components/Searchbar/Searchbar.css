@@ -1,7 +1,5 @@
 .searchbar {
-  margin-top: 50px;
-  position: absolute;
-  top: 30%;
+  top: 40%;
   left: 10%;
   right: 10%;
   border-radius: 50px;
@@ -35,6 +33,7 @@
   outline: none;
   float: left;
   color: black;
-  font-size: 16px;
+  font-size: 100%;
   line-height: 40px;
+  text-align: center;
 }

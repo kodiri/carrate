@@ -8,7 +8,7 @@ function Hero() {
       <div className="logo-container">
         <img src={carrate} alt={carrate} />
       </div>
-      <p> Carrate</p>
+      <p className="logo-text">Carrate</p>
     </div>
   );
 }
