@@ -34,35 +34,39 @@ handleSubmit = (event) => {
 
   render() {
     return (
-      <div className="search">
-        <form onSubmit={this.handleSubmit}>
-          <input
-            id="searchbar"
-            type="text"
-            name="search"
-            placeholder="Search my ingredients"
-            value={this.state.search}
-            onChange={this.handleChange}
-          />
-          <input type="submit" value="Search" />
-      <div className="searchbar">
-        <form onSubmit={this.handleSubmit}>
-          <Link className="filter-icon">
-            <img src={filterIcon} alt="Filter Icon" />
-          </Link>
-          <input
-            className="searchbar-text"
-            id="searchbar"
-            type="text"
-            name="search"
-            placeholder="What's in the cupboard?"
-            value={this.state.search}
-            onChange={this.handleChange}
-          />
-          <Link className="search-button" to="/results">
-            <img src={magnifierIcon} alt="Search Button" />
-          </Link>
-        </form>
+      <div>
+        <div className="search">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              id="searchbar"
+              type="text"
+              name="search"
+              placeholder="Search my ingredients"
+              value={this.state.search}
+              onChange={this.handleChange}
+            />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+        <div className="searchbar">
+          <form onSubmit={this.handleSubmit}>
+            <Link className="filter-icon">
+              <img src={filterIcon} alt="Filter Icon" />
+            </Link>
+            <input
+              className="searchbar-text"
+              id="searchbar"
+              type="text"
+              name="search"
+              placeholder="What's in the cupboard?"
+              value={this.state.search}
+              onChange={this.handleChange}
+            />
+            <Link className="search-button" to="/results">
+              <img src={magnifierIcon} alt="Search Button" />
+            </Link>
+          </form>
+        </div>
       </div>
     );
   }
