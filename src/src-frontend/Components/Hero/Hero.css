@@ -2,13 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Ceviche+One&family=Shojumaru&display=swap");
 
 .wrapper {
-  width: 80%;
-  margin: auto auto;
+  width: 100%;
+  /* background-color: red; */
+  /* height: 30vh; */
+  box-sizing: border-box;
 }
 
 .wrapper p {
   font-family: "Shojumaru", cursive;
-  font-size: 4em;
+  font-size: 3em;
   color: orange;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -46,20 +48,8 @@
   }
 }
 
-@media (min-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
-    width: 50%;
-    margin: auto auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr 1fr;
-    padding: 0;
-    width: 50%;
-    margin: auto auto;
+@media only screen and (min-width: 1000px) {
+  .wrapper p {
+    font-size: 5em;
   }
 }
