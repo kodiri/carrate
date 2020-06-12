@@ -38,7 +38,7 @@ const APP = () => {
           value={search}
           onChange={updateSearch}
           // name="search"
-          placeholder="type here"
+          placeholder="What's in the cupboard?"
         />
         <button className="search-btn" type="submit">
           Search
