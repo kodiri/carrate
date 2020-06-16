@@ -1,6 +1,7 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
+import Menu from "../Navbar/Menu/Menu.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
 import filterIcon from "../../Images/filter-icon.svg";
 const APP = () => {
@@ -32,6 +33,7 @@ const APP = () => {
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
+        <Menu />
         <input
           className="searchbar-text"
           type="text"
@@ -40,8 +42,8 @@ const APP = () => {
           // name="search"
           placeholder="What's in the cupboard?"
         />
-        <button className="search-btn" type="submit">
-          Search
+        <button className="search-button" type="submit">
+          <img src={magnifierIcon} alt="search button" />
         </button>
       </form>
       {recipes.map((recipe) => (
