@@ -3,7 +3,7 @@ import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
 import Menu from "../Navbar/Menu/Menu.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
-import filterIcon from "../../Images/filter-icon.svg";
+
 const APP = () => {
   const APP_ID = "948e2ff1";
   const APP_KEY = "2d7de9309cad9acbecd59a9acaa0b598";
@@ -23,12 +23,10 @@ const APP = () => {
   };
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    // console.log(search);
   };
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    // setSearch(" ");  to empty the search bar after we pressed the submit button
   };
   return (
     <div className="APP">
@@ -39,7 +37,6 @@ const APP = () => {
           type="text"
           value={search}
           onChange={updateSearch}
-          // name="search"
           placeholder="What's in the cupboard?"
         />
         <button className="search-button" type="submit">
