@@ -11,21 +11,18 @@ import RandomRecipe from "./Pages/RandomRecipe/RandomRecipe.js";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <div>
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route
-              exact
-              path="/randomRecipe"
-              component={withRouter(RandomRecipe)}
-            />
-          </Switch>
-        </div>
-      </div>
-    </Router>
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route
+            exact
+            path="/randomRecipe"
+            component={withRouter(RandomRecipe)}
+          />
+        </Switch>
+      </Router>
+    </div>
   );
 }
-
 export default App;
