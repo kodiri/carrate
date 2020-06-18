@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Recipe = ({ title, calories, image, id }) => {
   return (
     <div>
-      <Link to={`/${id}`} className="item">
+      <Link to="/chosenrecipe" className="item">
         <h2>{title}</h2>
       </Link>
       <p>{Math.round(calories)} calories</p>

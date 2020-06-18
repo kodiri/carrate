@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Homepage from "./Pages/Homepage/Homepage.js";
 import RandomRecipe from "./Pages/RandomRecipe/RandomRecipe.js";
+import RecipeCardPage from "./Pages/RecipeCardPage/RecipeCardPage.js";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             path="/randomRecipe"
             component={withRouter(RandomRecipe)}
           />
+          <Route exact path="/chosenrecipe" component={RecipeCardPage} />
         </Switch>
       </Router>
     </div>
