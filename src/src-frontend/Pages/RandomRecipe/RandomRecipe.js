@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./RandomRecipe.css";
+
 
 const API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
 
@@ -25,15 +27,34 @@ export default function RandomRecipe() {
   } = recipe;
 
   return (
-    <div className="random-recipe-container">
-      <h1>Random Recipe</h1>
-      <div>
-        <img src={strMealThumb} />{" "}
-      </div>
-      <h3>{strMeal}</h3>
-      <h3>Recipe category: {strCategory}</h3>
-      <h3>Dish type: {strArea}</h3>
-      <h3>{strInstructions}</h3>
+    <div className="recipe-container">
+      <div className="meal">
+          <div className="meal-img">
+            <img src={strMealThumb} />{" "}
+          </div>
+          <div className="meal-details">
+            <h1 className="meal-title">{strMeal}</h1>
+            <p className="meal-instructions">
+            {strInstructions.substring(0, 251) + "..."}
+            </p>
+            <ul className="meal-info">
+              <li>
+                Recipe category: <strong>{strCategory}</strong>
+              </li>
+              <li>
+                Dish type: <strong>{strArea}</strong>
+              </li>
+
+            <button className="btn">
+              <a href="#"> View Recipe <i class="fa fa-arrow-right"></i></a>
+            </button>  
+            </ul>   
+          </div> 
+        </div> 
     </div>
   );
 }
+
+
+
+

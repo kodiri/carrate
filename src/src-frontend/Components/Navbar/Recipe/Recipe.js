@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 const Recipe = ({ title, calories, image, id }) => {
   return (
     <div>
@@ -14,3 +15,5 @@ const Recipe = ({ title, calories, image, id }) => {
 };
 
 export default Recipe;
+
+
