@@ -13,7 +13,9 @@ export default function Menu() {
       </button>
       {menuOpen && (
         <div className="menu-list">
-          <div className="menu-link">Categories</div>
+            <label class="dropdown-item"><input type="checkbox" name="vegetarian" value="vegetarian"/>Vegetarian</label>
+            <label class="dropdown-item"><input type="checkbox" name="vegan" value="vegan"/>Vegan</label>
+            <label class="dropdown-item"><input type="checkbox" name="gluten" value="gluten"/>Gluten Free</label>        
         </div>
       )}
       {/* // </div> */}
