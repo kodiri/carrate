@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Recipe = ({ title, calories, image, id, cautions }) => {
   return (
     <div>
-      <Link to={`/${id}`} className="item">
+      <Link to="/chosenrecipe" className="item">
         <h2>{title}</h2>
       </Link>
       <p>{cautions}</p>
@@ -15,3 +15,5 @@ const Recipe = ({ title, calories, image, id, cautions }) => {
 };
 
 export default Recipe;
+
+

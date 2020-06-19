@@ -1,30 +1,56 @@
-// import React, { useState, useEffect } from "react";
-// import "./RecipeCardPage.css";
+import React, { useState, useEffect } from "react";
+import "./RecipeCardPage.css";
 
-// const API_URL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772";
 
-// export default function GetRecipe() {
-//   const [recipe, setRecipe] = useState(undefined);
-//   useEffect(() => {
-//     async function getRecipe() {
-//       const res = await fetch(API_URL);
-//       const data = await res.json();
+const API_URL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772";
 
-//       setRecipe(data.meals[0]);
-//     }
+export default function RecipeCardPage() {
+  const [recipe, setRecipe] = useState(undefined);
 
-//     getRecipe();
-//   }, []);
+  useEffect(() => {
+    async function getChosenRecipe() {
+      const response = await fetch(API_URL);
+      const data = await response.json();
+      setRecipe(data.meals[0]);
+    }
+    getChosenRecipe();
+  }, []);
 
-//   if (!recipe) return null;
+  if (!recipe) return null;
 
-//   return (
-//     <div className="chosen-recipe">
-//       <h3 className="chosen-recipe-title">{meal.strMeal}</h3>
-//       <div className="chosen-recipe-img">
-//         <img src={meal.strMealThumb} alt={meal.strMeal} />
-//       </div>
-//       <h5 className="chosen-recipe-instructions">{meal.strInstructions}</h5>
-//     </div>
-//   );
-// }
+  const {
+    strMeal,
+    strMealThumb,
+    strInstructions,
+    strArea,
+    strCategory,
+  } = recipe;
+
+  return (
+    <div className="recipe-container">
+      <div className="meal">
+        <div className="meal-img">
+          <img src={strMealThumb} />{" "}
+        </div>
+        <div className="meal-details">
+          <h1 className="meal-title">{strMeal}</h1>
+          <p className="meal-instructions">
+            {strInstructions.substring(0, 250) + "..."}
+          </p>
+          <ul className="meal-info">
+            <li>
+              Recipe category: <strong>{strCategory}</strong>
+            </li>
+            <li>
+              Dish type: <strong>{strArea}</strong>
+            </li>
+
+          <button className="btn">
+            <a href="#"> View Recipe <i class="fa fa-arrow-right"></i></a>
+          </button>  
+          </ul>   
+        </div> 
+      </div> 
+    </div>
+  );
+}
