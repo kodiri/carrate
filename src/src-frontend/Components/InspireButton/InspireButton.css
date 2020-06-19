@@ -6,10 +6,14 @@
   height: 40px;
   border-radius: 20px;
   padding: 10px;
-  border: 2px solid #fe9e0d;
 }
 
 .inspire-btn {
+  font-size: 30px;
+  font-family: "Signika", sans-serif;
+
   background: none;
   border-radius: 20px;
+  border-color: orange;
+  width: 100%;
 }
