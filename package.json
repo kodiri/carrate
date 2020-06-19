@@ -17,6 +17,7 @@
     "serve": "^11.3.2"
   },
   "scripts": {
+    "start-heroku": "serve -s build", 
     "start": "PORT=3004 react-scripts start",
     "start-backend": "node src/backend/app.js",
     "build": "react-scripts build",
