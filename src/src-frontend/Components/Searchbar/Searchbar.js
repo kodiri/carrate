@@ -46,13 +46,13 @@ const APP = () => {
         </button>
       </form>
       {recipes
-     //   .filter((recipe) => recipe.recipe.cautions.includes(checkedValues) === true)
+        //   .filter((recipe) => recipe.recipe.cautions.includes(checkedValues) === true)
         .map((recipe) => (
-        <Recipe
+          <Recipe
             key={recipe.idMeal}
             title={recipe.strMeal}
             image={recipe.strMealThumb}
-        />    
+          />
         ))}
     </div>
   );
