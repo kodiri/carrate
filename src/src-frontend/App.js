@@ -21,7 +21,7 @@ function App() {
             path="/randomRecipe"
             component={withRouter(RandomRecipe)}
           />
-          <Route exact path="/recipes/:key" component={RecipeCardPage} />
+          <Route exact path={"/recipes/:id"}  component={RecipeCardPage} />
         </Switch>
       </Router>
     </div>

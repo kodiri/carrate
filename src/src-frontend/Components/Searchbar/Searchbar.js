@@ -50,6 +50,7 @@ const APP = () => {
         .map((recipe) => (
           <Recipe
             key={recipe.idMeal}
+            id={recipe.idMeal}
             title={recipe.strMeal}
             image={recipe.strMealThumb}
           />
