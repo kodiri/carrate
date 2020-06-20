@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./RecipeCardPage.css";
 
-
-const API_URL = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772";
-
-export default function RecipeCardPage() {
+export default function RecipeCardPage({ match }) {
   const [recipe, setRecipe] = useState(undefined);
 
   useEffect(() => {
     async function getChosenRecipe() {
-      const response = await fetch(API_URL);
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.key}`
+      );
       const data = await response.json();
       setRecipe(data.meals[0]);
     }
@@ -45,12 +44,15 @@ export default function RecipeCardPage() {
               Dish type: <strong>{strArea}</strong>
             </li>
 
-          <button className="btn">
-            <a href="#"> View Recipe <i class="fa fa-arrow-right"></i></a>
-          </button>  
-          </ul>   
-        </div> 
-      </div> 
+            <button className="btn">
+              <a href="#">
+                {" "}
+                View Recipe <i class="fa fa-arrow-right"></i>
+              </a>
+            </button>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
