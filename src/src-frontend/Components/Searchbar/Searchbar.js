@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
-import Menu from "../Navbar/Menu/Menu.js";
+import Menu, {selectedValues} from "../Navbar/Menu/Menu.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
 
 const APP = () => {
@@ -28,6 +28,8 @@ const APP = () => {
     e.preventDefault();
     setQuery(search);
   };
+  const checkedValues = selectedValues();
+  console.log(checkedValues);
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
@@ -43,14 +45,18 @@ const APP = () => {
           <img src={magnifierIcon} alt="search button" />
         </button>
       </form>
-      {recipes.map((recipe) => (
+      {recipes
+     //   .filter((recipe) => recipe.recipe.cautions.includes(checkedValues) === true)
+        .map((recipe) => (
         <Recipe
           key={recipe.recipe.id}
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
-        />
-      ))}
+          cautions={recipe.recipe.cautions}
+        />    
+      ))
+      }
     </div>
   );
 };
