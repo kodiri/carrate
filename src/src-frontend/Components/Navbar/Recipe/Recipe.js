@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Recipe = ({ title, calories, image, id, cautions }) => {
+const Recipe = ({ key, title, image }) => {
   return (
     <div>
-      <Link to="/chosenrecipe" className="item">
+      <Link to={`/recipes/${key}`} className="item">
         <h2>{title}</h2>
       </Link>
-      <p>{cautions}</p>
-      <p>{Math.round(calories)} calories</p>
       <img src={image} />
     </div>
   );
 };
 
 export default Recipe;
-
-

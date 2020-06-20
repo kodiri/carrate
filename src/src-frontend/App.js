@@ -16,8 +16,12 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/randomRecipe" component={withRouter(RandomRecipe)}/>
-          <Route exact path="/chosenrecipe" component={RecipeCardPage}/>
+          <Route
+            exact
+            path="/randomRecipe"
+            component={withRouter(RandomRecipe)}
+          />
+          <Route exact path="/recipes/:key" component={RecipeCardPage} />
         </Switch>
       </Router>
     </div>
