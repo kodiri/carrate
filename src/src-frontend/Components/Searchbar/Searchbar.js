@@ -1,33 +1,37 @@
 import React, { useEffect, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
 import Menu, { selectedValues } from "../Navbar/Menu/Menu.js";
+import NotFound from "../NotFound/NotFound.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
-import { useIsMount } from './useIsMount';
+import resetIcon from "../../Images/reset.png";
+import { useIsMount } from "./useIsMount";
+import { useHistory } from "react-router-dom";
 
 const APP = () => {
-  const APP_ID = "948e2ff1";
-  const APP_KEY = "2d7de9309cad9acbecd59a9acaa0b598";
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  const history = useHistory();
   const isMount = useIsMount();
 
- // useEffect(() => {
- //   getRecipes();
- // }, [query]);
-
+  // useEffect(() => {
+  //   getRecipes();
+  // }, [query]);
 
   useEffect(() => {
     if (isMount) {
-      console.log('First Render');
+      console.log("First Render");
     } else {
       getRecipes();
     }
-  },[query]);
+  }, [query]);
 
   const getRecipes = async () => {
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`);
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
+    );
     const data = await response.json();
     setRecipes(data.meals);
     //console.log(data.meals);
@@ -59,16 +63,24 @@ const APP = () => {
         <button className="search-button" type="submit">
           <img src={magnifierIcon} alt="search button" />
         </button>
+        <button className="searchbar-reset" onClick={() => setRecipes([])}>
+          <img className="reset-icon" src={resetIcon} alt="reset" />
+        </button>
       </form>
-      
-      {recipes.map((recipe) => (
-          <Recipe
-            key={recipe.idMeal}
-            id={recipe.idMeal}
-            title={recipe.strMeal}
-            image={recipe.strMealThumb}
-          />
-        ))}
+      <div className="recipe-results">
+        {recipes === null ? (
+          <Redirect to={NotFound} />
+        ) : (
+          recipes.map((recipe) => (
+            <Recipe
+              key={recipe.idMeal}
+              id={recipe.idMeal}
+              title={recipe.strMeal}
+              image={recipe.strMealThumb}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };

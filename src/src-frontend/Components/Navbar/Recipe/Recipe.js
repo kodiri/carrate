@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Recipe = ({ id, title, image }) => {
   return (
-    <div>
+    <div className="results-grid">
+      <h2 className="results-title">{title}</h2>
       <Link to={`/recipes/${id}`} className="item">
-        <h2>{title}</h2>
+        <img className="results-image" src={image} />
       </Link>
-      <img src={image} />
     </div>
   );
 };
