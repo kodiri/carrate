@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
-import Menu from "../Navbar/Menu/Menu.js";
+import Menu, { selectedValues } from "../Navbar/Menu/Menu.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
 
 const APP = () => {
@@ -14,12 +14,12 @@ const APP = () => {
     getRecipes();
   }, [query]);
   const getRecipes = async () => {
-    const responce = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
     );
-    const data = await responce.json();
-    setRecipes(data.hits);
-    console.log(data.hits);
+    const data = await response.json();
+    setRecipes(data.meals);
+    console.log(data.meals);
   };
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -28,6 +28,8 @@ const APP = () => {
     e.preventDefault();
     setQuery(search);
   };
+  const checkedValues = selectedValues();
+  console.log(checkedValues);
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
@@ -37,20 +39,21 @@ const APP = () => {
           type="text"
           value={search}
           onChange={updateSearch}
-          placeholder="What's in the cupboard?"
+          placeholder="What do you want to use up?"
         />
         <button className="search-button" type="submit">
           <img src={magnifierIcon} alt="search button" />
         </button>
       </form>
-      {recipes.map((recipe) => (
-        <Recipe
-          key={recipe.recipe.id}
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-        />
-      ))}
+      {recipes
+        //   .filter((recipe) => recipe.recipe.cautions.includes(checkedValues) === true)
+        .map((recipe) => (
+          <Recipe
+            key={recipe.idMeal}
+            title={recipe.strMeal}
+            image={recipe.strMealThumb}
+          />
+        ))}
     </div>
   );
 };

@@ -13,12 +13,20 @@ export default function Menu() {
       </button>
       {menuOpen && (
         <div className="menu-list">
-            <label class="dropdown-item"><input type="checkbox" name="vegetarian" value="vegetarian"/>Vegetarian</label>
-            <label class="dropdown-item"><input type="checkbox" name="vegan" value="vegan"/>Vegan</label>
-            <label class="dropdown-item"><input type="checkbox" name="gluten" value="gluten"/>Gluten Free</label>        
+            <label class="dropdown-item"><input type="checkbox" name="gluten" value="Gluten"/>Gluten Free</label>   
+            <label class="dropdown-item"><input type="checkbox" name="gluten" value="Sulfites"/>Sulfites Free</label>     
         </div>
-      )}
+      )
+      }
       {/* // </div> */}
     </>
   );
+}
+
+export function selectedValues(){
+  const values = Array
+  .from(document.querySelectorAll('input[type="checkbox"]'))
+  .filter((checkbox) => checkbox.checked)
+  .map((checkbox) => checkbox.value);
+ return values;                              
 }
