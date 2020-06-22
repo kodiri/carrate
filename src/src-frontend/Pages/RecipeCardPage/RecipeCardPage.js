@@ -7,7 +7,7 @@ export default function RecipeCardPage({ match }) {
   useEffect(() => {
     async function getChosenRecipe() {
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.key}`
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`
       );
       const data = await response.json();
       setRecipe(data.meals[0]);
