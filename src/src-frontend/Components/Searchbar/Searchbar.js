@@ -5,6 +5,7 @@ import Recipe from "../Navbar/Recipe/Recipe.js";
 import Menu, { selectedValues } from "../Navbar/Menu/Menu.js";
 import NotFound from "../NotFound/NotFound.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
+import resetIcon from "../../Images/reset.png";
 import { useIsMount } from "./useIsMount";
 import { useHistory } from "react-router-dom";
 
@@ -63,7 +64,7 @@ const APP = () => {
           <img src={magnifierIcon} alt="search button" />
         </button>
         <button className="searchbar-reset" onClick={() => setRecipes([])}>
-          Reset
+          <img className="reset-icon" src={resetIcon} alt="reset" />
         </button>
       </form>
       <div className="recipe-results">

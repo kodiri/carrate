@@ -38,7 +38,6 @@
 }
 
 .searchbar-reset {
-  width: 40%;
   justify-self: center;
   border: none;
   background: none;
@@ -46,6 +45,10 @@
   color: black;
   font-size: 100%;
   text-align: center;
+}
+
+.reset-icon {
+  width: 40%;
 }
 
 .recipe-results {
