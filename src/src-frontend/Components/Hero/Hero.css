@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+/* .wrapper.logo-img {
+  width: 1%;
+} */
+
 .wrapper p {
   font-family: "Shojumaru", cursive;
   font-size: 3em;
