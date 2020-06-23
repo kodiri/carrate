@@ -6,7 +6,7 @@
 
 .meal {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-areas: "meal-img" "meal-details";
   background-color: #ffeedc;
   border-radius: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -16,6 +16,7 @@
   overflow: hidden;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  grid-area: meal-img;
 }
 
 .meal-img img {
@@ -28,6 +29,7 @@
   text-align: left;
   font-family: "Poppins", sans-serif;
   position: relative;
+  grid-area: meal-details;
 }
 
 .meal-title {
@@ -93,4 +95,11 @@
   width: 800px;
   /* border:1px solid red; */
   padding: 25px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .meal {
+    grid-template-areas: "meal-img meal-img meal-details meal-details meal-details";
+    width: 100%;
+  }
 }
