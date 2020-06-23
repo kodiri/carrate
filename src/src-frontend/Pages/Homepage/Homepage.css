@@ -1,13 +1,30 @@
 .homepage-container {
   width: 100%;
   padding: 20% 10% 20% 10%;
+  grid-gap: 0.5%;
   display: grid;
   box-sizing: border-box;
   align-items: center;
   justify-items: justify;
-  grid-gap: 10%;
 }
 
 .homepage-title {
   font-size: 60px;
+}
+
+img {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.logo-img {
+  width: 6%;
+}
+
+h2 {
+  font-size: 100%;
+  text-decoration: none;
+  color: #ff6600;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
 }

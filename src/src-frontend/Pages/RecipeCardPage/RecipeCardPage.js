@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./RecipeCardPage.css";
 
 export default function RecipeCardPage({ match }) {
@@ -34,7 +35,7 @@ export default function RecipeCardPage({ match }) {
         <div className="meal-details">
           <h1 className="meal-title">{strMeal}</h1>
           <p className="meal-instructions">
-            {strInstructions.substring(0, 250) + "..."}
+            {strInstructions /*.substring(0, 250) + "..."*/}
           </p>
           <ul className="meal-info">
             <li>
@@ -45,10 +46,11 @@ export default function RecipeCardPage({ match }) {
             </li>
 
             <button className="btn">
-              <a href="#">
-                {" "}
-                View Recipe <i class="fa fa-arrow-right"></i>
-              </a>
+              {/* <a href="#"> */}
+              <Link to="/">
+                <i class="fa fa-arrow-left"></i> Back to Home
+              </Link>
+              {/* </a> */}
             </button>
           </ul>
         </div>
