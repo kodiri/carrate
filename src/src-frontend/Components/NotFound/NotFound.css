@@ -1,0 +1,84 @@
+.not-found {
+  padding: 5%;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 5%;
+  grid-template-areas: "not-found-logo-grid" "not-found-message";
+}
+
+.not-found-message {
+  display: grid;
+  align-items: center;
+  background-color: #ffeedc;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 7%;
+  box-sizing: border-box;
+  grid-area: not-found-message;
+}
+
+.not-found-logo-grid {
+  display: grid;
+  justify-items: center;
+  grid-area: not-found-logo-grid;
+}
+
+.message {
+  margin: 0 0 20px;
+  color: #ff6600;
+  font-size: 1.2em;
+}
+
+.not-found-logo {
+  width: 30%;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn:hover {
+  background-color: #ff9966;
+}
+
+.not-found-logo:hover {
+  -webkit-animation: jump 1.5s ease 0s infinite normal;
+  animation: jump 1.5s ease 0s infinite normal;
+  animation-timing-function: ease;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .not-found {
+    grid-template-areas: "not-found-logo-grid not-found-message not-found-message";
+    padding: 12% 5%;
+  }
+
+  /* .not-found-logo-grid {
+    justify-items: start;
+  } */
+}
