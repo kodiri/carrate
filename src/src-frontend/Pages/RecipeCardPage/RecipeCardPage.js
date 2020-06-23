@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./RandomRecipe.css";
+import "./RecipeCardPage.css";
 
-const API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
-
-export default function RandomRecipe() {
+export default function RecipeCardPage({ match }) {
   const [recipe, setRecipe] = useState(undefined);
 
   useEffect(() => {
-    async function getRandomMeal() {
-      const response = await fetch(API_URL);
+    async function getChosenRecipe() {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`
+      );
       const data = await response.json();
       setRecipe(data.meals[0]);
     }
-    getRandomMeal();
+    getChosenRecipe();
   }, []);
 
   if (!recipe) return null;
@@ -35,7 +35,7 @@ export default function RandomRecipe() {
         <div className="meal-details">
           <h1 className="meal-title">{strMeal}</h1>
           <p className="meal-instructions">
-            {strInstructions /*.substring(0, 251) + "..."*/}
+            {strInstructions /*.substring(0, 250) + "..."*/}
           </p>
           <ul className="meal-info">
             <li>

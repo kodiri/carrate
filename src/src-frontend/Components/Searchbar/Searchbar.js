@@ -1,33 +1,54 @@
 import React, { useEffect, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import "./Searchbar.css";
 import Recipe from "../Navbar/Recipe/Recipe.js";
-import Menu from "../Navbar/Menu/Menu.js";
+import Menu, { selectedValues } from "../Navbar/Menu/Menu.js";
+import NotFound from "../NotFound/NotFound.js";
 import magnifierIcon from "../../Images/magnifier-icon.svg";
+import resetIcon from "../../Images/reset.png";
+import { useIsMount } from "./useIsMount";
+import { useHistory } from "react-router-dom";
 
 const APP = () => {
-  const APP_ID = "948e2ff1";
-  const APP_KEY = "2d7de9309cad9acbecd59a9acaa0b598";
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  const history = useHistory();
+  const isMount = useIsMount();
+
+  // useEffect(() => {
+  //   getRecipes();
+  // }, [query]);
+
   useEffect(() => {
-    getRecipes();
+    if (isMount) {
+      console.log("First Render");
+    } else {
+      getRecipes();
+    }
   }, [query]);
+
   const getRecipes = async () => {
-    const responce = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
     );
-    const data = await responce.json();
-    setRecipes(data.hits);
-    console.log(data.hits);
+    const data = await response.json();
+    setRecipes(data.meals);
+    //console.log(data.meals);
   };
+
   const updateSearch = (e) => {
     setSearch(e.target.value);
   };
+
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
   };
+
+  const checkedValues = selectedValues();
+  console.log(checkedValues);
+
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
@@ -37,20 +58,36 @@ const APP = () => {
           type="text"
           value={search}
           onChange={updateSearch}
+<<<<<<< HEAD
           placeholder="What's in the cupboard?"
         />
         <button className="search-button" type="submit">
           <img src={magnifierIcon} alt="search button" />
+=======
+          placeholder="What do you want to use up?"
+        />
+        <button className="search-button" type="submit">
+          <img src={magnifierIcon} alt="search button" />
+        </button>
+        <button className="searchbar-reset" onClick={() => setRecipes([])}>
+          <img className="reset-icon" src={resetIcon} alt="reset" />
+>>>>>>> 8249ce8b1b5be37c68926942f1759060015f18d7
         </button>
       </form>
-      {recipes.map((recipe) => (
-        <Recipe
-          key={recipe.recipe.id}
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-        />
-      ))}
+      <div className="recipe-results">
+        {recipes === null ? (
+          <Redirect to="/notfound" />
+        ) : (
+          recipes.map((recipe) => (
+            <Recipe
+              key={recipe.idMeal}
+              id={recipe.idMeal}
+              title={recipe.strMeal}
+              image={recipe.strMealThumb}
+            />
+          ))
+        )}
+      </div>
     </div>
   );
 };
