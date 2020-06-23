@@ -5,6 +5,7 @@ import "./Homepage.css";
 import Searchbar from "../../Components/Searchbar/Searchbar.js";
 import InspireButton from "../../Components/InspireButton/InspireButton.js";
 import Hero from "../../Components/Hero/Hero.js";
+import Team from '../../Components/Team/Team.js'
 
 export default function Homepage() {
   return (
@@ -17,6 +18,7 @@ export default function Homepage() {
         <Hero />
         <Searchbar />
         <InspireButton />
+        <Team />
       </div>
     </>
   );
