@@ -9,14 +9,16 @@ import Hero from "../../Components/Hero/Hero.js";
 export default function Homepage() {
   return (
     <>
-      <div className="homepage-container">
-        <link
-          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-          rel="stylesheet"
-        ></link>
-        <Hero />
-        <Searchbar />
-        <InspireButton />
+      <div className="homepage">
+        <div className="homepage-container">
+          <link
+            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+            rel="stylesheet"
+          ></link>
+          <Hero />
+          <Searchbar />
+          <InspireButton />
+        </div>
       </div>
     </>
   );
