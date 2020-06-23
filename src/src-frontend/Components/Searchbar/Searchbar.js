@@ -69,7 +69,7 @@ const APP = () => {
       </form>
       <div className="recipe-results">
         {recipes === null ? (
-          <Redirect to={NotFound} />
+          <Redirect to="/notfound" />
         ) : (
           recipes.map((recipe) => (
             <Recipe
