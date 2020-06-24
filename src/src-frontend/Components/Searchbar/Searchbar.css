@@ -1,31 +1,32 @@
 .searchbar {
-  left: 10%;
-  right: 10%;
   border-radius: 50px;
-  padding: 1%;
   border: 2px solid #fe9e0d;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-content: center;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
 }
 
-.filter-button {
-  float: left;
-  border: none;
-  background: none;
-  outline: none;
-  box-sizing: border-box;
-  width: 40%;
+::placeholder {
+  color: #000;
 }
 
+.filter-button,
 .search-button {
-  float: right;
+  display: flex;
+  justify-self: start;
   border: none;
   background: none;
   outline: none;
   box-sizing: border-box;
-  width: 40%;
+  width: 2.5rem;
+  filter: invert(100%);
+}
+
+.searchbar-button-container {
+  border-radius: 50px;
+  background-color: #ff6600;
+  padding: 0.5%;
 }
 
 .searchbar-text {
@@ -33,8 +34,9 @@
   background: none;
   outline: none;
   color: black;
-  font-size: 100%;
+  font-size: 1rem;
   text-align: center;
+  flex: 2;
 }
 
 .searchbar-reset {
@@ -66,11 +68,13 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  .searchbar {
-    grid-template-columns: 1fr 10fr 1fr 1fr;
-  }
-
   .searchbar-reset {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .searchbar-text {
+    font-size: 12px;
   }
 }

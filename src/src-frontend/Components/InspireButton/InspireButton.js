@@ -11,7 +11,7 @@ export default function InspireButton() {
   return (
     <div className="inspire-btn-container">
       <button className="inspire-btn" onClick={goRandomRecipePage}>
-        Inspire Me!
+        Inspire Me
       </button>
       <link
         href="https://fonts.googleapis.com/css2?family=Signika&display=swap"

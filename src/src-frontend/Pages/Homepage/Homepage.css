@@ -1,11 +1,12 @@
+.homepage {
+  padding: 1rem 1rem;
+}
 .homepage-container {
-  width: 100%;
-  padding: 20% 10% 20% 10%;
-  grid-gap: 0.5%;
-  display: grid;
-  box-sizing: border-box;
-  align-items: center;
-  justify-items: justify;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #ffeedc;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .homepage-title {
@@ -15,10 +16,6 @@
 img {
   width: 80%;
   box-sizing: border-box;
-}
-
-.logo-img {
-  width: 6%;
 }
 
 h2 {
