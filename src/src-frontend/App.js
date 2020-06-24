@@ -9,6 +9,9 @@ import {
 import Homepage from "./Pages/Homepage/Homepage.js";
 import RandomRecipe from "./Pages/RandomRecipe/RandomRecipe.js";
 import RecipeCardPage from "./Pages/RecipeCardPage/RecipeCardPage.js";
+//import Team from "./Components/Team/Team.js";
+import NotFound from "./Components/NotFound/NotFound.js";
+//import Recipe from "./Components/Navbar/Recipe/Recipe.js";
 
 function App() {
   return (
@@ -16,8 +19,13 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/randomRecipe" component={withRouter(RandomRecipe)}/>
-          <Route exact path="/chosenrecipe" component={RecipeCardPage}/>
+          <Route
+            exact
+            path="/randomRecipe"
+            component={withRouter(RandomRecipe)}
+          />
+          <Route exact path={"/recipes/:id"} component={RecipeCardPage} />
+          <Route exact path="/notfound" component={NotFound} />
         </Switch>
       </Router>
     </div>

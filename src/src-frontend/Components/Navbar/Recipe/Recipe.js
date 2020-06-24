@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-const Recipe = ({ title, calories, image, id }) => {
+const Recipe = ({ id, title, image }) => {
   return (
-    <div>
-      <Link to="/chosenrecipe" className="item">
-        <h2>{title}</h2>
+    <div className="results-grid">
+      <h2 className="results-title">{title}</h2>
+      <Link to={`/recipes/${id}`} className="item">
+        <img className="results-image" src={image} />
       </Link>
-      <p>{Math.round(calories)} calories</p>
-      <img src={image} />
     </div>
   );
 };

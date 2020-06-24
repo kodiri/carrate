@@ -2,20 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Ceviche+One&family=Shojumaru&display=swap");
 
 .wrapper {
-  width: 100%;
-  /* background-color: red; */
-  /* height: 30vh; */
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.intro-text {
+  width: 95%;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 5%;
   box-sizing: border-box;
 }
 
+.logo-img {
+  width: 4rem;
+}
+
 .wrapper p {
-  font-family: "Shojumaru", cursive;
-  font-size: 3em;
-  color: orange;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-  text-shadow: 2px 2px 5px black;
-  transform: scaleY(1.5);
+  font-family: "Carme", sans-serif;
+  font-size: 4em;
+  color: black;
   margin: 0;
 }
 
@@ -50,6 +57,6 @@
 
 @media only screen and (min-width: 1000px) {
   .wrapper p {
-    font-size: 5em;
+    font-size: 6em;
   }
 }
