@@ -9,6 +9,10 @@ function Hero() {
         <img className="logo-img" src={carrate} alt={carrate} />
       </div>
       <p className="logo-text">carrate</p>
+      <h2 className="intro-text">
+        No more recipe books! Search an ingredient and Carrate will do the work
+        for you
+      </h2>
       <link
         href="https://fonts.googleapis.com/css2?family=Carme&display=swap"
         rel="stylesheet"
