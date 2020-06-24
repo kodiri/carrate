@@ -1,19 +1,17 @@
 .inspire-btn-container {
-  top: 50%;
-  bottom: 0;
-  left: 25%;
-  right: 25%;
-  height: 40px;
-  border-radius: 20px;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .inspire-btn {
-  font-size: 30px;
-  font-family: "Signika", sans-serif;
-
-  background: none;
-  border-radius: 20px;
-  border-color: orange;
-  width: 100%;
+  background-color: #ff6600;
+  font-family: "Carme", sans-serif;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 2em;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
 }
