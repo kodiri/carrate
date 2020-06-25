@@ -2,7 +2,6 @@
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
-  margin-top: 4rem;
 }
 
 .inspire-btn {
@@ -10,14 +9,14 @@
   font-family: "Carme", sans-serif;
   color: white;
   padding: 1rem 2rem;
-  font-size: 1.8em;
+  font-size: 1em;
   border: none;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
   margin: auto auto;
-  width: 70%;
+  width: 80%;
   max-width: 500px;
   height: 50px;
   line-height: 0.5;

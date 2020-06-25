@@ -16,7 +16,6 @@ body {
   height: 100vh;
 }
 .homepage-container {
-  /* padding: 1rem; */
   background-color: #ffeedc;
   border-radius: 5px;
   box-sizing: border-box;
@@ -25,9 +24,12 @@ body {
   margin: auto auto;
   height: 90%;
   margin-top: 4%;
-  margin-bottom: 4%;
+  padding: 2%;
   /* overflow:hidden; */
   min-width: 100;
+  display: grid;
+  /* grid-template-columns: 1fr;
+  align-content: center; */
   /* overflow-x: scroll; */
 }
 
@@ -53,16 +55,22 @@ h2 {
   font-family: "Carme", sans-serif;
   color: white;
   padding: 1rem 2rem;
-  font-size: 1.8em;
+  font-size: 1em;
   border: none;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
   margin: auto auto;
-  width: 70%;
+  width: 80%;
   max-width: 500px;
   height: 50px;
   line-height: 0.5;
   text-decoration: none;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 5%;
+  box-sizing: border-box;
 }

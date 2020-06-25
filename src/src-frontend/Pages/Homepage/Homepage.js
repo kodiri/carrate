@@ -14,18 +14,20 @@ export default function Homepage() {
   }
   return (
     <>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+        rel="stylesheet"
+      ></link>
       <div className="homepage">
         <div className="homepage-container">
-          <link
-            href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-            rel="stylesheet"
-          ></link>
           <Hero />
           <Searchbar />
-          <InspireButton />
-          <button className="meet-team" onClick={getTeam}>
-            Meet the Team
-          </button>
+          <div className="buttons">
+            <InspireButton />
+            <button className="meet-team" onClick={getTeam}>
+              Meet the Team
+            </button>
+          </div>
         </div>
       </div>
     </>
