@@ -1,21 +1,14 @@
 .searchbar {
   border-radius: 50px;
-<<<<<<< HEAD
-  border: 2px solid #fe9e0d;
-=======
   border: 2px solid  #ff6600;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
-<<<<<<< HEAD
-=======
   margin: auto auto;
   width: 70%;
   max-width: 500px;
   height: 50px;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
 
 ::placeholder {
@@ -25,37 +18,26 @@
 .filter-button,
 .search-button {
   display: flex;
-<<<<<<< HEAD
-  justify-self: start;
-=======
   justify-content: center;
   align-items: center;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
   border: none;
   background: none;
   outline: none;
   box-sizing: border-box;
   width: 2.5rem;
   filter: invert(100%);
-<<<<<<< HEAD
-=======
   height: 100%;
   /* justify-self: start; */
 }
 
 .filter-button img{
   width: 60%;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
 
 .searchbar-button-container {
   border-radius: 50px;
   background-color: #ff6600;
-<<<<<<< HEAD
-  padding: 0.5%;
-=======
   padding: 0.5%; 
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
 
 .searchbar-text {
@@ -63,11 +45,7 @@
   background: none;
   outline: none;
   color: black;
-<<<<<<< HEAD
-  font-size: 1rem;
-=======
   font-size: 0.8em;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
   text-align: center;
   flex: 2;
 }
@@ -111,11 +89,8 @@
   .recipe-results {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-<<<<<<< HEAD
-=======
   }
 
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
   .searchbar-reset {
     width: 100%;
   }

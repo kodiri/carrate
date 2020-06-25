@@ -1,14 +1,8 @@
 .inspire-btn-container {
-<<<<<<< HEAD
-  display: flex;
-  justify-content: center;
-=======
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
   margin-top: 4rem;
-
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
 
 .inspire-btn {
@@ -16,22 +10,15 @@
   font-family: "Carme", sans-serif;
   color: white;
   padding: 1rem 2rem;
-<<<<<<< HEAD
-  font-size: 2em;
-=======
   font-size: 1.8em;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
   border: none;
   border-radius: 50px;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
-<<<<<<< HEAD
-=======
   margin: auto auto;
   width: 70%;
   max-width: 500px;
   height: 50px;
   line-height: 0.5;
->>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
