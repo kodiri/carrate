@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import filterIcon from "../../../Images/filter-icon.svg";
+import App from '../../Searchbar/Searchbar.js'
 // import { Link } from "react-router-dom";
 
 export default function Menu() {
@@ -11,6 +12,7 @@ export default function Menu() {
   const getSearch = (e) => {
     setQuery(e.target.value);
     console.log({query});
+    
   }
 
   return (
@@ -20,6 +22,7 @@ export default function Menu() {
         <img src={filterIcon} alt="filter button" />
       </button>
       {menuOpen && (
+        <>
         <div className="menu-list">
             <button className='filter-box' value='Seafood' onClick={getSearch}>Seafood</button>
             <button className='filter-box' value='Beef' onClick={getSearch}>Beef</button>
@@ -34,7 +37,8 @@ export default function Menu() {
             <button className='filter-box' value='Vegetarian' onClick={getSearch}>Vegetarian</button>
             <button className='filter-box' value='Breakfast' onClick={getSearch}>Breakfast</button>
             <button className='filter-box' value='Goat' onClick={getSearch}>Goat</button>
-        </div>        
+        </div>  
+        </>      
       )
       }
       {/* // </div> */}
