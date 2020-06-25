@@ -3,7 +3,21 @@
 
 .wrapper {
   display: grid;
+<<<<<<< HEAD
   grid-template-rows: 1fr 1fr;
+=======
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.intro-text {
+  width: 95%;
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  width: 70%;
+>>>>>>> 7842244279a409933a6976527b7e92ece815b172
 }
 
 .logo-img {
@@ -13,7 +27,16 @@
 .wrapper p {
   font-family: "Carme", sans-serif;
   font-size: 4em;
+<<<<<<< HEAD
   color: black;
+=======
+  margin: 0;
+  font-size: 5em;
+  color: #ff6600;
+  -webkit-text-stroke-width: 1px;
+  /* -webkit-text-stroke-color: black; */
+  text-shadow: 2px 2px 5px black;
+>>>>>>> 7842244279a409933a6976527b7e92ece815b172
   margin: 0;
 }
 
@@ -48,6 +71,6 @@
 
 @media only screen and (min-width: 1000px) {
   .wrapper p {
-    font-size: 5em;
+    font-size: 6em;
   }
 }

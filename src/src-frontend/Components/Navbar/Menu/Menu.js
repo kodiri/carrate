@@ -1,10 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import filterIcon from "../../../Images/filter-icon.svg";
+import Recipe from "../../Navbar/Recipe/Recipe.js";
 // import { Link } from "react-router-dom";
 
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [recipes, setRecipes] = useState([]);
+
+ 
+  useEffect(() => {
+    getRecipes();
+    }, [query]);
+
+  const getSearch = (e) => {
+    setQuery(e.target.value); 
+  }
+
+  const getRecipes = async () => {
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${query}`);
+    const data = await response.json();
+    setRecipes(data.meals);
+    console.log(data.meals);
+  };
+
   return (
     <>
       {/* // <div className="menu-container"> */}
@@ -12,21 +32,25 @@ export default function Menu() {
         <img src={filterIcon} alt="filter button" />
       </button>
       {menuOpen && (
+        <>
         <div className="menu-list">
-            <label class="dropdown-item"><input type="checkbox" name="gluten" value="Gluten"/>Gluten Free</label>   
-            <label class="dropdown-item"><input type="checkbox" name="gluten" value="Sulfites"/>Sulfites Free</label>     
-        </div>
+            <button className='filter-box' value='Seafood' onClick={getSearch}>Seafood</button>
+            <button className='filter-box' value='Beef' onClick={getSearch}>Beef</button>
+            <button className='filter-box' value='Chicken' onClick={getSearch}>Chicken</button>
+            <button className='filter-box' value='Dessert' onClick={getSearch}>Dessert</button>
+            <button className='filter-box' value='Lamb' onClick={getSearch}>Lamb</button>
+            <button className='filter-box' value='Pasta' onClick={getSearch}>Pasta</button>
+            <button className='filter-box' value='Pork' onClick={getSearch}>Pork</button>
+            <button className='filter-box' value='Side' onClick={getSearch}>Side</button>
+            <button className='filter-box' value='Starter' onClick={getSearch}>Starter</button>
+            <button className='filter-box' value='Vegan' onClick={getSearch}>Vegan</button>
+            <button className='filter-box' value='Vegetarian' onClick={getSearch}>Vegetarian</button>
+            <button className='filter-box' value='Breakfast' onClick={getSearch}>Breakfast</button>
+        </div>  
+        </>      
       )
       }
       {/* // </div> */}
     </>
   );
-}
-
-export function selectedValues(){
-  const values = Array
-  .from(document.querySelectorAll('input[type="checkbox"]'))
-  .filter((checkbox) => checkbox.checked)
-  .map((checkbox) => checkbox.value);
- return values;                              
 }
