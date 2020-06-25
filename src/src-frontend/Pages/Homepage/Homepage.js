@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import "./Homepage.css";
 import Searchbar from "../../Components/Searchbar/Searchbar.js";
@@ -8,6 +8,10 @@ import Hero from "../../Components/Hero/Hero.js";
 import Team from "../../Components/Team/Team.js";
 
 export default function Homepage() {
+  const history = useHistory();
+  function getTeam() {
+    return history.push("/team");
+  }
   return (
     <>
       <div className="homepage">
@@ -19,7 +23,9 @@ export default function Homepage() {
           <Hero />
           <Searchbar />
           <InspireButton />
-          <Team />
+          <button className="meet-team" onClick={getTeam}>
+            Meet the Team
+          </button>
         </div>
       </div>
     </>

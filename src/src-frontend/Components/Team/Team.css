@@ -1,3 +1,52 @@
-li{
-    list-style: none;
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 5%;
+  box-sizing: border-box;
+  grid-gap: 1%;
+}
+
+.team-grid img {
+  width: 40%;
+}
+
+.team-grid .photo {
+  width: 60%;
+}
+
+.team-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-area: contact;
+}
+
+.team-member {
+  display: grid;
+  grid-template-areas: "name" "photo" "contact";
+  align-items: center;
+  grid-row-gap: 2%;
+  box-sizing: border-box;
+  padding: 8%;
+  background-color: #ffeedc;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.team-member-name {
+  grid-area: name;
+  font-size: ;
+}
+
+.photo-grid {
+  grid-area: photo;
+  display: grid;
+  justify-items: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .team-member {
+    grid-template-areas: "photo name" "photo contact";
+  }
 }
