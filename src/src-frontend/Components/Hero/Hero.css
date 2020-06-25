@@ -13,6 +13,7 @@
   font-size: 1em;
   margin-bottom: 5%;
   box-sizing: border-box;
+  width: 70%;
 }
 
 .logo-img {
@@ -22,7 +23,12 @@
 .wrapper p {
   font-family: "Carme", sans-serif;
   font-size: 4em;
-  color: black;
+  margin: 0;
+  font-size: 5em;
+  color: #ff6600;
+  -webkit-text-stroke-width: 1px;
+  /* -webkit-text-stroke-color: black; */
+  text-shadow: 2px 2px 5px black;
   margin: 0;
 }
 
