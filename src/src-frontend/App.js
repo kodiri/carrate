@@ -9,7 +9,7 @@ import {
 import Homepage from "./Pages/Homepage/Homepage.js";
 import RandomRecipe from "./Pages/RandomRecipe/RandomRecipe.js";
 import RecipeCardPage from "./Pages/RecipeCardPage/RecipeCardPage.js";
-import Team from "./Components/Team/Team.js";
+import Team from "./Pages/Team/Team.js";
 import NotFound from "./Components/NotFound/NotFound.js";
 //import Recipe from "./Components/Navbar/Recipe/Recipe.js";
 

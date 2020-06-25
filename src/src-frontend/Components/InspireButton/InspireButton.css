@@ -6,6 +6,7 @@
 
 .inspire-btn {
   background-color: #ff6600;
+  outline: none;
   font-family: "Carme", sans-serif;
   color: white;
   padding: 1rem 2rem;
@@ -21,4 +22,3 @@
   height: 50px;
   line-height: 0.5;
 }
-
