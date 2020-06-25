@@ -1,6 +1,6 @@
 .searchbar {
   border-radius: 50px;
-  border: 2px solid  #ff6600;
+  border: 2px solid #ff6600;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -30,14 +30,14 @@
   /* justify-self: start; */
 }
 
-.filter-button img{
+.filter-button img {
   width: 60%;
 }
 
 .searchbar-button-container {
   border-radius: 50px;
   background-color: #ff6600;
-  padding: 0.5%; 
+  padding: 0.5%;
 }
 
 .searchbar-text {
@@ -71,24 +71,21 @@
   margin-top: 5%;
   width: 100%;
   padding: 1%;
+  box-sizing: border-box;
 }
 
-.results-image{
-
+.results-image {
   border-radius: 5px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  border-top-left-radius:5px;
-  border-bottom-left-radius:5px;
-  object-fit:cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  object-fit: cover;
 }
-
-
 
 @media only screen and (min-width: 1000px) {
   .recipe-results {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
   }
 
   .searchbar-reset {

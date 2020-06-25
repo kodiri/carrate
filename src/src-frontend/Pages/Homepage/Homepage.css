@@ -3,7 +3,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -15,17 +16,20 @@ html, body {
   height: 100vh;
 }
 .homepage-container {
-  /* padding: 1rem; */
   background-color: #ffeedc;
   border-radius: 5px;
+  box-sizing: border-box;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   width: 90%;
   margin: auto auto;
   height: 90%;
   margin-top: 4%;
-  margin-bottom: 4%;
+  padding: 2%;
   /* overflow:hidden; */
   min-width: 100;
+  display: grid;
+  /* grid-template-columns: 1fr;
+  align-content: center; */
   /* overflow-x: scroll; */
 }
 
@@ -44,4 +48,29 @@ h2 {
   color: #ff6600;
   height: 100%;
   font-family: "Poppins", sans-serif;
+}
+
+.meet-team {
+  background-color: #ff6600;
+  font-family: "Carme", sans-serif;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1em;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
+  margin: auto auto;
+  width: 80%;
+  max-width: 500px;
+  height: 50px;
+  line-height: 0.5;
+  text-decoration: none;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 5%;
+  box-sizing: border-box;
 }
