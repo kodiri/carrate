@@ -29,10 +29,11 @@ const APP = () => {
   }, [query]);
 
   const getRecipes = async () => {
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`);
+    const response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/filter.php?i=${query}`
+    );
     const data = await response.json();
     setRecipes(data.meals);
-    //console.log(data.meals);
   };
 
   const updateSearch = (e) => {
@@ -43,9 +44,6 @@ const APP = () => {
     e.preventDefault();
     setQuery(search);
   };
-
-//  const checkedValues = selectedValues();
-//  console.log(checkedValues);
 
   return (
     <div className="APP">
@@ -74,15 +72,15 @@ const APP = () => {
         {recipes === null ? (
           <Redirect to="/notfound" />
         ) : (
-            recipes.map((recipe) => (
-              <Recipe
-                key={recipe.idMeal}
-                id={recipe.idMeal}
-                title={recipe.strMeal}
-                image={recipe.strMealThumb}
-              />
-            ))
-          )}
+          recipes.map((recipe) => (
+            <Recipe
+              key={recipe.idMeal}
+              id={recipe.idMeal}
+              title={recipe.strMeal}
+              image={recipe.strMealThumb}
+            />
+          ))
+        )}
       </div>
     </div>
   );
