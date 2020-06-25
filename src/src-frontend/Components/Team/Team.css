@@ -7,11 +7,18 @@
 }
 
 .team-grid img {
-  width: 40%;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  object-fit: cover;
 }
 
 .team-grid .photo {
-  width: 60%;
+  width: 80%;
+  box-shadow: none;
 }
 
 .team-contact-grid {
@@ -36,7 +43,8 @@
 
 .team-member-name {
   grid-area: name;
-  font-size: ;
+  font-size: 1.3em;
+  display: grid;
 }
 
 .photo-grid {
@@ -45,8 +53,20 @@
   justify-items: center;
 }
 
+.linked,
+.github,
+.portfolio {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
 @media only screen and (min-width: 500px) {
   .team-member {
     grid-template-areas: "photo name" "photo contact";
+  }
+
+  .team-member-name {
+    font-size: 2em;
   }
 }
