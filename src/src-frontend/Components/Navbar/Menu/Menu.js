@@ -34,7 +34,7 @@ export default function Menu() {
 
   return (
     <>
-      {/* // <div className="menu-container"> */}
+      {/* // <div className="menu-container">  */}
       <button className="filter-button" onClick={() => setMenuOpen(!menuOpen)}>
         <img src={filterIcon} alt="filter button" />
       </button>
