@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Team/Team.css';
 
 
-function Team() {
-    return (
-        <div className="wrapper">
-            <ul>
-                <li><a href='#' className="team">Meet the Team-Bravo!</a></li>
-            </ul>
-        </div>
-    );
+class Team extends React.Component {
+    render() {
+        return (
+            <div>
+                <ul>
+                    <li><Link to="/team">Team</Link></li>
+                </ul>
+            </div>
+        );
+    }
 }
 
 export default Team;
