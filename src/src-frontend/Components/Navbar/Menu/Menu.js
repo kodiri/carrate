@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import filterIcon from "../../../Images/filter-icon.svg";
-import App from '../../Searchbar/Searchbar.js'
+import Recipe from "../../Navbar/Recipe/Recipe.js";
 // import { Link } from "react-router-dom";
 
 export default function Menu() {
@@ -46,7 +46,6 @@ export default function Menu() {
             <button className='filter-box' value='Vegan' onClick={getSearch}>Vegan</button>
             <button className='filter-box' value='Vegetarian' onClick={getSearch}>Vegetarian</button>
             <button className='filter-box' value='Breakfast' onClick={getSearch}>Breakfast</button>
-            <button className='filter-box' value='Goat' onClick={getSearch}>Goat</button>
         </div>  
         </>      
       )
