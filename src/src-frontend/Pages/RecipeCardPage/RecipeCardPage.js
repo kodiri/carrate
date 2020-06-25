@@ -14,7 +14,7 @@ export default function RecipeCardPage({ match }) {
       setRecipe(data.meals[0]);
     }
     getChosenRecipe();
-  }, []);
+  }, [match.params.id]);
 
   if (!recipe) return null;
 

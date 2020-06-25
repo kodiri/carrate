@@ -92,7 +92,9 @@
     margin: 0 auto;
     max-width: 100%;
     width: 800px;
-    /* border:1px solid red; */
     padding:25px;
   }
-  
+
+.inspired-heading, h1{
+    color:#ff6600;
+}

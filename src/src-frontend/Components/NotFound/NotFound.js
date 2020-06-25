@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NotFound.css";
-import carrate from "../../Images/carrate.jpg";
+import carrate from "../../Images/sad-carrate.jpg";
 
 export default function NotFound() {
   return (

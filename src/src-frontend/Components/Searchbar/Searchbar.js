@@ -76,15 +76,15 @@ const APP = () => {
         {recipes === null ? (
           <Redirect to="/notfound" />
         ) : (
-          recipes.map((recipe) => (
-            <Recipe
-              key={recipe.idMeal}
-              id={recipe.idMeal}
-              title={recipe.strMeal}
-              image={recipe.strMealThumb}
-            />
-          ))
-        )}
+            recipes.map((recipe) => (
+              <Recipe
+                key={recipe.idMeal}
+                id={recipe.idMeal}
+                title={recipe.strMeal}
+                image={recipe.strMealThumb}
+              />
+            ))
+          )}
       </div>
     </div>
   );
