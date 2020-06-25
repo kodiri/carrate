@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./RandomRecipe.css";
 
 const API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
 
 export default function RandomRecipe() {
   const [recipe, setRecipe] = useState(undefined);
+  const history = useHistory();
+
+  function goHome() {
+    history.push("/");
+  }
 
   useEffect(() => {
     async function getRandomMeal() {
@@ -47,12 +52,8 @@ export default function RandomRecipe() {
                 Dish type: <strong>{strArea}</strong>
               </li>
 
-              <button className="btn">
-                {/* <a href="#"> */}
-                <Link to="/">
-                  <i class="fa fa-arrow-left"></i> Back to Home
-                </Link>
-                {/* </a> */}
+              <button className="btn" onClick={goHome}>
+                <i class="fa fa-arrow-left"></i> Back to Home
               </button>
             </ul>
           </div>
@@ -61,7 +62,3 @@ export default function RandomRecipe() {
     </div>
   );
 }
-
-
-
-
