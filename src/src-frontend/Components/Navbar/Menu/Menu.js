@@ -7,13 +7,23 @@ import App from '../../Searchbar/Searchbar.js'
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [recipes, setRecipes] = useState([]);
 
+ 
+  useEffect(() => {
+    getRecipes();
+    }, [query]);
 
   const getSearch = (e) => {
-    setQuery(e.target.value);
-    console.log({query});
-    
+    setQuery(e.target.value); 
   }
+
+  const getRecipes = async () => {
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${query}`);
+    const data = await response.json();
+    setRecipes(data.meals);
+    console.log(data.meals);
+  };
 
   return (
     <>
