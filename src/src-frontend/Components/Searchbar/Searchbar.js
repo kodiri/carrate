@@ -44,8 +44,8 @@ const APP = () => {
     setQuery(search);
   };
 
-  const checkedValues = selectedValues();
-  console.log(checkedValues);
+//  const checkedValues = selectedValues();
+//  console.log(checkedValues);
 
   return (
     <div className="APP">
