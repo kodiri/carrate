@@ -58,6 +58,7 @@ export default function Menu() {
         </>      
       )
       }
+      <div className="recipe-category-results">
       {recipes.map((recipe) => (
               <Recipe
                 key={recipe.idMeal}
@@ -67,6 +68,7 @@ export default function Menu() {
               />
             ))
         }
+      </div>
     </>
   );
 }
