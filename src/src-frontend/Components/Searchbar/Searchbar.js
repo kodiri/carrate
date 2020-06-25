@@ -50,7 +50,9 @@ const APP = () => {
   return (
     <div className="APP">
       <form onSubmit={getSearch} className="searchbar">
-        <Menu />
+        <div className="searchbar-button-container">
+          <Menu />
+        </div>
         <input
           className="searchbar-text"
           type="text"
@@ -58,12 +60,15 @@ const APP = () => {
           onChange={updateSearch}
           placeholder="What do you want to use up?"
         />
-        <button className="search-button" type="submit">
-          <img src={magnifierIcon} alt="search button" />
-        </button>
-        <button className="searchbar-reset" onClick={() => setRecipes([])}>
+        <div className="searchbar-button-container">
+          <button className="search-button" type="submit">
+            <img src={magnifierIcon} alt="search button" />
+          </button>
+        </div>
+
+        {/* <button className="searchbar-reset" onClick={() => setRecipes([])}>
           <img className="reset-icon" src={resetIcon} alt="reset" />
-        </button>
+        </button> */}
       </form>
       <div className="recipe-results">
         {recipes === null ? (
