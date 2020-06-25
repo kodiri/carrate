@@ -2,17 +2,24 @@ import React, { useState, useEffect } from "react";
 import "./Menu.css";
 import filterIcon from "../../../Images/filter-icon.svg";
 import Recipe from "../../Navbar/Recipe/Recipe.js";
+import {useIsMount} from '../../Searchbar/useIsMount.js'
 // import { Link } from "react-router-dom";
 
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
+  const isMount = useIsMount();
+
 
  
   useEffect(() => {
-    getRecipes();
-    }, [query]);
+    if (isMount) {
+      console.log("First Render");
+    } else {
+      getRecipes();
+    }
+  }, [query]);
 
   const getSearch = (e) => {
     setQuery(e.target.value); 
@@ -27,7 +34,7 @@ export default function Menu() {
 
   return (
     <>
-      {/* // <div className="menu-container"> */}
+      {/* // <div className="menu-container">  */}
       <button className="filter-button" onClick={() => setMenuOpen(!menuOpen)}>
         <img src={filterIcon} alt="filter button" />
       </button>
@@ -47,10 +54,21 @@ export default function Menu() {
             <button className='filter-box' value='Vegetarian' onClick={getSearch}>Vegetarian</button>
             <button className='filter-box' value='Breakfast' onClick={getSearch}>Breakfast</button>
         </div>  
+       
         </>      
       )
       }
-      {/* // </div> */}
+      <div className="recipe-category-results">
+      {recipes.map((recipe) => (
+              <Recipe
+                key={recipe.idMeal}
+                id={recipe.idMeal}
+                title={recipe.strMeal}
+                image={recipe.strMealThumb}
+              />
+            ))
+        }
+      </div>
     </>
   );
 }
