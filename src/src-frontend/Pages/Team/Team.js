@@ -88,7 +88,7 @@ export default function Team() {
           </a>
         </div>
       </div>
-      <div className="team-member lauren">
+      <div className="team-member">
         <div className="team-member-name">
           <h2>Lauren Pane</h2>
         </div>
