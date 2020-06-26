@@ -28,6 +28,10 @@
   grid-area: contact;
 }
 
+.photo {
+  max-width: 500px;
+}
+
 .team-member {
   display: grid;
   grid-template-areas: "name" "photo" "contact";
