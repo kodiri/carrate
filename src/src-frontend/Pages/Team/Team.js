@@ -4,7 +4,7 @@ import "./Team.css";
 import portfolio from "../../Images/portfolio.png";
 import github from "../../Images/github-icon.svg";
 import linkedin from "../../Images/linkedin-icon.svg";
-import lauren from "../../Images/Team/lauren.JPG";
+import lauren from "../../Images/Team/lauren.jpg";
 import lorraine from "../../Images/Team/lorraine.jpg";
 import max from "../../Images/Team/max.jpeg";
 import maxim from "../../Images/Team/maxim.jpg";
