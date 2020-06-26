@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Menu.css";
 import filterIcon from "../../../Images/filter-icon.svg";
 import Recipe from "../../Navbar/Recipe/Recipe.js";
 import { useIsMount } from "../../Searchbar/useIsMount.js";
 // import { Link } from "react-router-dom";
 
+
+
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [query, setQuery] = useState("");
+  const [query2, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   const isMount = useIsMount();
+
 
   useEffect(() => {
     if (isMount) {
@@ -17,7 +20,7 @@ export default function Menu() {
     } else {
       getRecipes();
     }
-  }, [query]);
+  }, [query2]);
 
   const getSearch = (e) => {
     setQuery(e.target.value);
@@ -25,12 +28,13 @@ export default function Menu() {
 
   const getRecipes = async () => {
     const response = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${query}`
+      `https://www.themealdb.com/api/json/v1/1/filter.php?c=${query2}`
     );
     const data = await response.json();
     setRecipes(data.meals);
     console.log(data.meals);
   };
+
 
   function openNav() {
     setMenuOpen(!menuOpen);
@@ -45,7 +49,7 @@ export default function Menu() {
       {menuOpen && (
         <>
           <ul className="menu-list">
-            <li className="filter-box" value="Seafood" onClick={getSearch}>
+            <li className="filter-box" id = 'button' value="Seafood" onClick={getSearch}>
               Seafood
             </li>
             <li className="filter-box" value="Beef" onClick={getSearch}>
@@ -84,16 +88,16 @@ export default function Menu() {
           </ul>
         </>
       )}
-      <div className="recipe-category-results">
-        {recipes.map((recipe) => (
-          <Recipe
-            key={recipe.idMeal}
-            id={recipe.idMeal}
-            title={recipe.strMeal}
-            image={recipe.strMealThumb}
-          />
-        ))}
-      </div>
+      
     </>
   );
 }
+/*
+export function selectedValues(){
+  const values = Array
+  .from(document.querySelectorAll("button"))
+  .forEach(button=>button.click())
+  .map((button) => button.value);
+ return values;                              
+} 
+*/
