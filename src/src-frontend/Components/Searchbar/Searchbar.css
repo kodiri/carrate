@@ -93,6 +93,38 @@
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .searchbar-text {
+    font-size: 12px;
+  }
+
+  .searchbar {
+    width: 80%;
+    max-width: 500px;
+    height: 50px;
+  }
+
+  .filter-button,
+  .search-button {
+    width: 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .searchbar-text {
+    font-size: 12px;
+  }
+
+  .searchbar {
+    width: 85%;
+  }
+
+  .filter-button,
+  .search-button {
+    width: 1.8rem;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .searchbar-text {
     font-size: 12px;

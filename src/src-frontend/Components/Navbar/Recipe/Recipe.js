@@ -13,5 +13,3 @@ const Recipe = ({ id, title, image }) => {
 };
 
 export default Recipe;
-
-

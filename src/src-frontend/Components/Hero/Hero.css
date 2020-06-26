@@ -21,7 +21,6 @@
 
 .wrapper p {
   font-family: "Carme", sans-serif;
-  font-size: 4em;
   font-size: 5em;
   color: #ff6600;
   -webkit-text-stroke-width: 1px;
@@ -62,5 +61,15 @@
 @media only screen and (min-width: 1000px) {
   .wrapper p {
     font-size: 6em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .intro-text {
+    font-size: 0.8rem;
+  }
+
+  .wrapper p {
+    font-size: 4em;
   }
 }
