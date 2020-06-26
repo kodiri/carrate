@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
-
 * {
   box-sizing: border-box;
 }
-
 .meal {
   display: grid;
   grid-template-areas: "meal-img" "meal-details";
@@ -11,19 +9,16 @@
   border-radius: 5px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
 .meal-img {
   overflow: hidden;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   grid-area: meal-img;
 }
-
 .meal-img img {
   height: 80%;
   object-fit: cover;
 }
-
 .meal-details {
   padding: 25px;
   text-align: left;
@@ -31,36 +26,30 @@
   position: relative;
   grid-area: meal-details;
 }
-
 .meal-title {
   margin: 0 0 20px;
   color: #ff6600;
   font-size: 1.5em;
 }
-
 .meal-instructions {
   font-size: 0.7em;
 }
-
 .meal-info {
   list-style-type: none;
   padding: 0;
   display: flex;
 }
-
 .meal-info li {
   margin-right: 2em;
   font-size: 1em;
   font-weight: 400;
   margin-top: 1em;
 }
-
 .meal-info li strong {
   color: #ff6600;
   display: block;
   font-size: 1em;
 }
-
 .btn {
   background-color: #ff6600;
   padding: 15px 25px;
@@ -72,23 +61,19 @@
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 8px 8px rgba(0, 0, 0, 0.2);
 }
-
 .btn a {
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
 }
-
 .meal-details .btn {
   position: absolute;
   right: -12px;
   bottom: -12px;
 }
-
 .btn:hover {
   background-color: #ff9966;
 }
-
 .recipe-container {
   margin: 0 auto;
   max-width: 100%;
@@ -96,7 +81,6 @@
   /* border:1px solid red; */
   padding: 25px;
 }
-
 @media only screen and (min-width: 1000px) {
   .meal {
     grid-template-areas: "meal-img meal-img meal-details meal-details meal-details";

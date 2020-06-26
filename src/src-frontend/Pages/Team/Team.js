@@ -7,6 +7,8 @@ import linkedin from "../../Images/linkedin-icon.svg";
 import lauren from "../../Images/Team/lauren.JPG";
 import lorraine from "../../Images/Team/lorraine.jpg";
 import max from "../../Images/Team/max.jpeg";
+import maxim from "../../Images/Team/maxim.jpg";
+import rafal from "../../Images/Team/rafal.png";
 
 export default function Team() {
   const history = useHistory();
@@ -133,24 +135,20 @@ export default function Team() {
           <h2>Maxim Botez</h2>
         </div>
         <div className="photo-grid">
-          <img src={lauren} alt="maxim photo" className="photo maxim" />
+          <img src={maxim} alt="maxim photo" className="photo maxim" />
         </div>
         <div className="team-contact-grid">
           <a
-            className="portfolio lauren"
-            href="https://portfoliolp.now.sh/"
+            className="portfolio maxim"
+            href="https://react-portfolio-iota.vercel.app/#home"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={portfolio}
-              alt="lauren portfolio"
-              className="photo lauren"
-            />
+            <img src={portfolio} alt="portfolio" className="photo" />
           </a>
           <a
-            className="linked lauren"
-            href="https://uk.linkedin.com/in/lauren-pane-773169169"
+            className="linked maxim"
+            href="https://www.linkedin.com/m/in/max-botez-72618568"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -171,36 +169,28 @@ export default function Team() {
           <h2>Rafal Dworak</h2>
         </div>
         <div className="photo-grid">
-          <img src={lauren} alt="rafal photo" className="photo max" />
+          <img src={rafal} alt="rafal photo" className="photo max" />
         </div>
         <div className="team-contact-grid">
           <a
-            className="portfolio lauren"
+            className="portfolio"
             href="https://portfoliolp.now.sh/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={portfolio}
-              alt="lauren portfolio"
-              className="photo lauren"
-            />
+            <img src={portfolio} alt="portfolio" className="photo" />
           </a>
           <a
-            className="linked lauren"
-            href="https://uk.linkedin.com/in/lauren-pane-773169169"
+            className="linked"
+            href="https://www.linkedin.com/in/rdworak/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={linkedin}
-              alt="lauren linkedin"
-              className="photo lauren"
-            />
+            <img src={linkedin} alt="linkedin" className="photo" />
           </a>
           <a
-            className="github lauren"
-            href="https://github.com/laurenpane"
+            className="github"
+            href="https://github.com/rafdworak"
             target="_blank"
             rel="noopener noreferrer"
           >
