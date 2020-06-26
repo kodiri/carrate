@@ -38,7 +38,7 @@ body {
 }
 
 img {
-  width: 80%;
+  width: 60%;
   box-sizing: border-box;
 }
 
@@ -52,6 +52,7 @@ h2 {
 
 .meet-team {
   background-color: #ff6600;
+  outline: none;
   font-family: "Carme", sans-serif;
   color: white;
   padding: 1rem 2rem;

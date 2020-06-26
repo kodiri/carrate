@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./RecipeCardPage.css";
 
 export default function RecipeCardPage({ match }) {
+  const history = useHistory();
   const [recipe, setRecipe] = useState(undefined);
+
+  function goHome() {
+    history.push("/");
+  }
 
   useEffect(() => {
     async function getChosenRecipe() {
@@ -45,12 +50,8 @@ export default function RecipeCardPage({ match }) {
               Dish type: <strong>{strArea}</strong>
             </li>
 
-            <button className="btn">
-              {/* <a href="#"> */}
-              <Link to="/">
-                <i class="fa fa-arrow-left"></i> Back to Home
-              </Link>
-              {/* </a> */}
+            <button className="btn" onClick={goHome}>
+              <i class="fa fa-arrow-left"></i> Back to Home
             </button>
           </ul>
         </div>
