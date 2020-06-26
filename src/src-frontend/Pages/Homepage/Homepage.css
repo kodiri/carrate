@@ -2,12 +2,6 @@
   box-sizing: border-box;
   padding: 0;
 }
-
-html,
-body {
-  height: 100%;
-}
-
 .homepage {
   /* padding: 1rem 1rem;
   box-sizing: border-box;
@@ -22,7 +16,7 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   width: 90%;
   margin: auto auto;
-  height: 90%;
+  height: 95%;
   margin-top: 4%;
   padding: 2%;
   /* overflow:hidden; */
@@ -32,16 +26,13 @@ body {
   align-content: center; */
   /* overflow-x: scroll; */
 }
-
 .homepage-title {
   font-size: 60px;
 }
-
 img {
   width: 60%;
   box-sizing: border-box;
 }
-
 h2 {
   font-size: 100%;
   text-decoration: none;
@@ -49,7 +40,6 @@ h2 {
   height: 100%;
   font-family: "Poppins", sans-serif;
 }
-
 .meet-team {
   background-color: #ff6600;
   outline: none;
@@ -69,7 +59,6 @@ h2 {
   line-height: 0.5;
   text-decoration: none;
 }
-
 .buttons {
   display: grid;
   grid-gap: 5%;

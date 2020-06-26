@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./NotFound.css";
 import carrate from "../../Images/sad-carrate.jpg";
-
 export default function NotFound() {
+  const history = useHistory();
+  function goHome() {
+    history.push("/");
+  }
   return (
     <div className="not-found">
       <div className="not-found-logo-grid">
@@ -17,12 +20,8 @@ export default function NotFound() {
           <br />
           Please enter a different ingredient
         </h1>
-        <button className="btn">
-          {/* <a href="#"> */}
-          <Link to="/">
-            <i class="fa fa-arrow-left"></i> Back to Home
-          </Link>
-          {/* </a> */}
+        <button className="btn" onClick={goHome}>
+          <i class="fa fa-arrow-left"></i> Back to Home
         </button>
       </div>
     </div>
